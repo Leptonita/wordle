@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/estilos.css" rel="stylesheet">
+    <title>Wordle</title>
+</head>
+<body>
+<h1>Wordle</h1>
+<div id="tablero">
+<div class="fila" id="linea0"><div class="celda" id="fila-0-col-0"></div> <div class="celda" id="fila-0-col-1"> </div><div class="celda" id="fila-0-col-2"> </div><div class="celda" id="fila-0-col-3"> </div><div class="celda" id="fila-0-col-4"> </div></div>
+<div class="fila" id="linea1"><div class="celda" id="fila-1-col-0"></div> <div class="celda" id="fila-1-col-1"> </div><div class="celda" id="fila-1-col-2"> </div><div class="celda" id="fila-1-col-3"> </div><div class="celda" id="fila-1-col-4"> </div></div>
+<div class="fila" id="linea2"><div class="celda" id="fila-2-col-0"></div> <div class="celda" id="fila-2-col-1"> </div><div class="celda" id="fila-2-col-2"> </div><div class="celda" id="fila-2-col-3"> </div><div class="celda" id="fila-2-col-4"> </div></div>
+<div class="fila" id="linea3"><div class="celda" id="fila-3-col-0"></div> <div class="celda" id="fila-3-col-1"> </div><div class="celda" id="fila-3-col-2"> </div><div class="celda" id="fila-3-col-3"> </div><div class="celda" id="fila-3-col-4"> </div></div>
+<div class="fila" id="linea4"><div class="celda" id="fila-4-col-0"></div> <div class="celda" id="fila-4-col-1"> </div><div class="celda" id="fila-4-col-2"> </div><div class="celda" id="fila-4-col-3"> </div><div class="celda" id="fila-4-col-4"> </div></div>
+<div class="fila" id="linea5"><div class="celda" id="fila-5-col-0"></div> <div class="celda" id="fila-5-col-1"> </div><div class="celda" id="fila-5-col-2"> </div><div class="celda" id="fila-5-col-3"> </div><div class="celda" id="fila-5-col-4"> </div></div>
+
+<!---->
+
+
+<div id="mensaje"></div>
+
+<div id="buttons">
+<button class="btnLetras" onclick="daLetra('a')">A</button>
+<button class="btnLetras" onclick="daLetra('b')">B</button>
+<button class="btnLetras" onclick="daLetra('c')">C</button>
+<button class="btnLetras" onclick="daLetra('d')">D </button>
+<button class="btnLetras" onclick="daLetra('e')">E </button>
+<button class="btnLetras" onclick="daLetra('f')">F </button>
+<button class="btnLetras" onclick="daLetra('g')">G </button>
+<button class="btnLetras" onclick="daLetra('h')">H </button>
+<button class="btnLetras" onclick="daLetra('i')">I </button>
+<button class="btnLetras" onclick="daLetra('j')">J </button>
+<button class="btnLetras" onclick="daLetra('k')">K</button>
+<button class="btnLetras" onclick="daLetra('l')">L </button>
+<button class="btnLetras" onclick="daLetra('m')">M </button>
+<button class="btnLetras" onclick="daLetra('n')">N </button>
+<button class="btnLetras" onclick="daLetra('ñ')">Ñ</button>
+<button class="btnLetras" onclick="daLetra('o')">O</button>
+<button class="btnLetras" onclick="daLetra('p')">P </button>
+<button class="btnLetras" onclick="daLetra('q')">Q </button>
+<button class="btnLetras" onclick="daLetra('r')">R </button>
+<button class="btnLetras" onclick="daLetra('s')">S </button>
+<button class="btnLetras" onclick="daLetra('t')">T </button>
+<button class="btnLetras" onclick="daLetra('u')">U </button>
+<button class="btnLetras" onclick="daLetra('v')">V </button>
+<button class="btnLetras" onclick="daLetra('w')">W </button>
+<button class="btnLetras" onclick="daLetra('x')">X </button>
+<button class="btnLetras" onclick="daLetra('y')">Y </button>
+<button class="btnLetras" onclick="daLetra('z')">Z </button>
+</div>
+</div>
+
+    <script src="js/wordle.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

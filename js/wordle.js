@@ -1,0 +1,1 @@
+const palabras =  ['aboya','haber','actos','acune','afeas','bajas','bajos','calvo','cloro','gafas','islas','vacas','toros','tacos','luces','tengo','vayas'];
