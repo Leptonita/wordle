@@ -2,7 +2,7 @@
 let palabra = "";
 let numAzar = Math.floor((Math.random() * (palabras.length - 1)) + 1);
 palabra = palabras[numAzar];
-//console.log(palabra);
+console.log(palabra);
 let intentos;
 const totalFilas = 6;
 const totalColum = 5;
@@ -14,8 +14,8 @@ let posicionAcertada = 0;
 
 function buscarLetra(letraIn) {
     let encontrado = false;
+
     let j = 0;
-    
     while (j < palabra.length && !encontrado) {
 
         if (palabra.includes(letraIn)) {
@@ -60,10 +60,15 @@ function daLetra(letraIn) {
                 k++;
             if (actualFila == totalFilas) {    
                 mensaje += 'se ha acabado, hasta la próxima. La palabra era ' + palabra;
-                document.getElementById('buttons').style.display = "none";                
+                document.getElementById('buttons').style.display = "none";   
+                document.getElementById('instrucciones').style.display = "none";
+                document.getElementById('leyenda').style.display = "none";
+
             }
         } else {
-            document.getElementById('buttons').style.display = "none";    
+            document.getElementById('buttons').style.display = "none";   
+            document.getElementById('instrucciones').style.display = "none";
+            document.getElementById('leyenda').style.display = "none"; 
             mensaje += 'Has acertado la palabra';            
         } 
     } else {
@@ -71,7 +76,7 @@ function daLetra(letraIn) {
         actualColu++
        
     }
-    
+    //console.log(posicionAcertada);
     document.getElementById("mensaje").innerHTML = mensaje;
 
 }
