@@ -19,8 +19,8 @@
 
 <!---->
 
-
-<div id="mensaje"></div>
+<div id="mensaje" class="glow"> 
+</div>
 
 <div id="buttons">
 <button class="btnLetras" onclick="daLetra('a')">A</button>
@@ -51,8 +51,16 @@
 <button class="btnLetras" onclick="daLetra('y')">Y </button>
 <button class="btnLetras" onclick="daLetra('z')">Z </button>
 </div>
+
+<div id="instrucciones" class="help">Adivina la palabra secreta que consta de 5 letras. <br>Dispones de 6 intentos. <br> El color de las celdas proporciona pistas clave que te ayudarán a resolver tu Wordle.</div>
+<div id="leyenda" class="box">
+    
+    <div><img src="./img/green.png" width="15px"> La letra está en la posición correcta de la palabra. </div>
+    <div><img src="./img/yellow.png" width="15px"> La letra está en la palabra pero en una posición incorrecta. </div>
+    <div><img src="./img/black.png" width="15px"> En este caso, la letra no se utiliza en la palabra secreta. </div>
 </div>
 
+</div>
     <script src="js/wordle.js"></script>
     <script src="js/main.js"></script>
 </body>
