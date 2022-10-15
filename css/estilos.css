@@ -30,9 +30,10 @@ h1 { color:#f6f4f1;}
 }
 
 #buttons {
-    width: 450px;
+    max-width: 450px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0, 10px;
 }
 
 .btnLetras {
@@ -64,7 +65,7 @@ h1 { color:#f6f4f1;}
 }
 .help{
     color:#f6f4f1;
-    width: 57%;
+    width: 75%;
     margin: 30px 20px 5px 20px;
     padding: 30px 20px 10px 20px;
     position: fixed;
@@ -75,7 +76,7 @@ h1 { color:#f6f4f1;}
 
  .overlay {
     position: fixed;
-    top: 200px;
+    top: 150px;
     /*bottom: 0;
     left: 0;
     right: 0;
