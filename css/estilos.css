@@ -17,11 +17,12 @@ h1 { color:#f6f4f1;}
     width: 40px;
     height: 45px;
     border: 1px solid #666;
-    padding-left: 23px;/**/
+    /*padding-left: 23px;*/
     margin: 2px;
     display: flex;
     align-items: center;    
     text-transform: uppercase;
+    justify-content: center;
 }
 
 .fila {
@@ -29,7 +30,7 @@ h1 { color:#f6f4f1;}
 }
 
 #buttons {
-    width: 500px;
+    width: 450px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -50,15 +51,52 @@ h1 { color:#f6f4f1;}
     border: 1px solid green;
     background-color: #f6f4f1;
 }
+.help-container {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(36, 36, 36);
+    opacity: 1; 
+    
+
+}
 .help{
     color:#f6f4f1;
     width: 57%;
-    margin: 10px 20px 5px 20px;
-    padding: 10px;
+    margin: 30px 20px 5px 20px;
+    padding: 30px 20px 10px 20px;
+    position: fixed;
+    z-index: 100;
+    background-color: black;
+    opacity: 0.9;
+}
+
+ .overlay {
+    position: fixed;
+    top: 200px;
+    /*bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;*/
+    visibility: visible; /* Este valor se cambió de hidden a visible */
+    
+}
+.btn-cerrar-popup {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    background-color: magenta;
+    border-radius: 50%;
+    line-height: 10px;
 }
 
 .glow {
     color:#f6f4f1;
     font-size: 1.2em;
     margin: 20px 0 0 0 ;
-}
+ }

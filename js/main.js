@@ -11,6 +11,14 @@ let actualColu = 0;
 let i = 0;
 let k = 0;
 let posicionAcertada = 0;
+document.getElementById("buttons").style.display = "none";
+
+function empezar() {
+    //alert("hola");
+    document.getElementById("instrucciones").style.visibility = "hidden";
+    document.getElementById("instrucciones").style.display = "none";
+    document.getElementById("buttons").style.display = "block";
+}
 
 function buscarLetra(letraIn) {
     let encontrado = false;
@@ -42,12 +50,12 @@ function buscarLetra(letraIn) {
 
 function daLetra(letraIn) {
     let mensaje = "";
-        
+
     if (actualColu < totalColum && actualFila < totalFilas) {}
 
-    const enCelda = document.getElementById('fila-' + actualFila + '-col-' + actualColu);     // ejemplo id celdas ("fila-0-col-0")
+    const enCelda = document.getElementById('fila-' + actualFila + '-col-' + actualColu); // ejemplo id celdas ("fila-0-col-0")
     enCelda.textContent = letraIn.toUpperCase();
-    
+
     buscarLetra(letraIn); //funcion para comprobar si la letra está en la palabra secreta   
 
     if (actualColu == (totalColum - 1) && actualFila <= totalFilas) { //final de fila y aun quedan filas por completar posicionAcertada <= totalColum
@@ -57,27 +65,36 @@ function daLetra(letraIn) {
             i = 0;
             posicionAcertada = 0;
             actualFila++;
-                k++;
-            if (actualFila == totalFilas) {    
-                mensaje += 'se ha acabado, hasta la próxima. La palabra era ' + palabra;
-                document.getElementById('buttons').style.display = "none";   
+            k++;
+            if (actualFila == totalFilas) {
+                mensaje += '¡Lástima! La palabra era \"' + palabra + '\"';
+                document.getElementById('buttons').style.display = "none";
                 document.getElementById('instrucciones').style.display = "none";
                 document.getElementById('leyenda').style.display = "none";
 
             }
         } else {
-            document.getElementById('buttons').style.display = "none";   
+            document.getElementById('buttons').style.display = "none";
             document.getElementById('instrucciones').style.display = "none";
-            document.getElementById('leyenda').style.display = "none"; 
-            mensaje += 'Has acertado la palabra';            
-        } 
+            document.getElementById('leyenda').style.display = "none";
+
+            if (actualFila == 0) {
+                mensaje += '¡Genial! Has acertado la palabra a la primera';
+            } else if (actualFila ==1) {
+                mensaje += '¡Extraordinario! Has acertado la palabra con tan sólo ' + (actualFila + 1) + ' intentos';
+            
+            } else if (actualFila <= 3) {
+                mensaje += '¡Estupendo! Has acertado la palabra en tan sólo ' + (actualFila + 1) + ' intentos';
+            } else {
+                mensaje += '¡Enhorabuena! Has acertado la palabra en ' + (actualFila + 1) + ' intentos';
+            }
+        }
     } else {
         i++
         actualColu++
-       
+
     }
     //console.log(posicionAcertada);
     document.getElementById("mensaje").innerHTML = mensaje;
 
 }
-
